@@ -1,34 +1,91 @@
-PS D:\WorkSpace\C#\ContractCheck> dotnet run
-Using launch settings from D:\WorkSpace\C#\ContractCheck\Properties\launchSettings.json...
-Building...
-D:\WorkSpace\C#\ContractCheck\Services\DatabaseService.cs(13,29): warning CS8601: Possible null reference assignment.    
-D:\WorkSpace\C#\ContractCheck\Services\DatabaseService.cs(11,12): warning CS8618: Non-nullable field '_connectionString' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the field as nullable.
-D:\WorkSpace\C#\ContractCheck\Models\Pegawai.cs(5,19): warning CS8618: Non-nullable property 'KodePegawai' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. 
-D:\WorkSpace\C#\ContractCheck\Models\Pegawai.cs(6,19): warning CS8618: Non-nullable property 'NamaPegawai' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. 
-D:\WorkSpace\C#\ContractCheck\Models\Pegawai.cs(7,19): warning CS8618: Non-nullable property 'KodeCabang' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
-D:\WorkSpace\C#\ContractCheck\Models\Pegawai.cs(8,19): warning CS8618: Non-nullable property 'NamaCabang' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.  
-D:\WorkSpace\C#\ContractCheck\Models\Pegawai.cs(9,19): warning CS8618: Non-nullable property 'KodeJabatan' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. 
-D:\WorkSpace\C#\ContractCheck\Models\Pegawai.cs(10,19): warning CS8618: Non-nullable property 'NamaJabatan' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
-D:\WorkSpace\C#\ContractCheck\Program.cs(11,18): error CS1061: 'IServiceCollection' does not contain a definition for 'AddSwaggerGen' and no accessible extension method 'AddSwaggerGen' accepting a first argument of type 'IServiceCollection' could be found (are you missing a using directive or an assembly reference?)
-D:\WorkSpace\C#\ContractCheck\Program.cs(18,9): error CS1061: 'WebApplication' does not contain a definition for 'UseSwagger' and no accessible extension method 'UseSwagger' accepting a first argument of type 'WebApplication' could be found (are you missing a using directive or an assembly reference?)
-D:\WorkSpace\C#\ContractCheck\Program.cs(19,9): error CS1061: 'WebApplication' does not contain a definition for 'UseSwaggerUI' and no accessible extension method 'UseSwaggerUI' accepting a first argument of type 'WebApplication' could be found (are you missing a using directive or an assembly reference?)
-D:\WorkSpace\C#\ContractCheck\Models\Jabatan.cs(5,19): warning CS8618: Non-nullable property 'KodeJabatan' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. 
-D:\WorkSpace\C#\ContractCheck\Models\Jabatan.cs(6,19): warning CS8618: Non-nullable property 'NamaJabatan' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable. 
-D:\WorkSpace\C#\ContractCheck\Models\Cabang.cs(5,19): warning CS8618: Non-nullable property 'KodeCabang' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.   
-D:\WorkSpace\C#\ContractCheck\Models\Cabang.cs(6,19): warning CS8618: Non-nullable property 'NamaCabang' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.   
-D:\WorkSpace\C#\ContractCheck\Pages\Index.cshtml.cs(12,12): warning CS8618: Non-nullable property 'PegawaiList' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.
-D:\WorkSpace\C#\ContractCheck\Pages\Index.cshtml.cs(21,67): warning CS8625: Cannot convert null literal to non-nullable reference type.
-D:\WorkSpace\C#\ContractCheck\Pages\Index.cshtml.cs(21,73): warning CS8625: Cannot convert null literal to non-nullable reference type.
-D:\WorkSpace\C#\ContractCheck\Pages\Index.cshtml.cs(21,79): warning CS8625: Cannot convert null literal to non-nullable reference type.
-D:\WorkSpace\C#\ContractCheck\Pages\Index.cshtml.cs(21,85): warning CS8625: Cannot convert null literal to non-nullable reference type.
-D:\WorkSpace\C#\ContractCheck\Controllers\PegawaiController.cs(25,38): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
-D:\WorkSpace\C#\ContractCheck\Pages\Index.cshtml.cs(24,38): warning CS1998: This async method lacks 'await' operators and will run synchronously. Consider using the 'await' operator to await non-blocking API calls, or 'await Task.Run(...)' to do CPU-bound work on a background thread.
-D:\WorkSpace\C#\ContractCheck\Services\DatabaseService.cs(39,43): warning CS8601: Possible null reference assignment.    
-D:\WorkSpace\C#\ContractCheck\Services\DatabaseService.cs(40,43): warning CS8601: Possible null reference assignment.    
-D:\WorkSpace\C#\ContractCheck\Services\DatabaseService.cs(41,42): warning CS8601: Possible null reference assignment.
-D:\WorkSpace\C#\ContractCheck\Services\DatabaseService.cs(42,42): warning CS8601: Possible null reference assignment.    
-D:\WorkSpace\C#\ContractCheck\Services\DatabaseService.cs(43,43): warning CS8601: Possible null reference assignment.    
-D:\WorkSpace\C#\ContractCheck\Services\DatabaseService.cs(44,43): warning CS8601: Possible null reference assignment.    
+An unhandled exception occurred while processing the request.
+LicenseContextPropertyObsoleteException: Please use the static 'ExcelPackage.License' property to set the required license information from EPPlus 8 and later versions. For more info see http://epplussoftware.com/developers/licensenotsetexception.
+OfficeOpenXml.ExcelPackage.set_LicenseContext(Nullable<LicenseContext> value)
 
-The build failed. Fix the build errors and run again.
-PS D:\WorkSpace\C#\ContractCheck> 
+TypeInitializationException: The type initializer for 'ContractCheck.Pages.IndexModel' threw an exception.
+ContractCheck.Pages.IndexModel..ctor(DatabaseService databaseService) in Index.cshtml.cs, line 18
+
+Stack Query Cookies Headers Routing
+LicenseContextPropertyObsoleteException: Please use the static 'ExcelPackage.License' property to set the required license information from EPPlus 8 and later versions. For more info see http://epplussoftware.com/developers/licensenotsetexception.
+OfficeOpenXml.ExcelPackage.set_LicenseContext(Nullable<LicenseContext> value)
+ContractCheck.Pages.IndexModel..cctor() in Index.cshtml.cs
++
+        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+Show raw exception details
+OfficeOpenXml.LicenseContextPropertyObsoleteException: Please use the static 'ExcelPackage.License' property to set the required license information from EPPlus 8 and later versions. For more info see http://epplussoftware.com/developers/licensenotsetexception.
+   at OfficeOpenXml.ExcelPackage.set_LicenseContext(Nullable`1 value)
+   at ContractCheck.Pages.IndexModel..cctor() in D:\WorkSpace\C#\ContractCheck\Pages\Index.cshtml.cs:line 15
+TypeInitializationException: The type initializer for 'ContractCheck.Pages.IndexModel' threw an exception.
+ContractCheck.Pages.IndexModel..ctor(DatabaseService databaseService) in Index.cshtml.cs
++
+    public IndexModel(DatabaseService databaseService)
+lambda_method6(Closure , IServiceProvider , object[] )
+Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider+<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(ref State next, ref Scope scope, ref object state, ref bool isCompleted)
+Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, object state, bool isCompleted)
+Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(ref State next, ref Scope scope, ref object state, ref bool isCompleted)
+Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+Show raw exception details
+System.TypeInitializationException: The type initializer for 'ContractCheck.Pages.IndexModel' threw an exception.
+ ---> OfficeOpenXml.LicenseContextPropertyObsoleteException: Please use the static 'ExcelPackage.License' property to set the required license information from EPPlus 8 and later versions. For more info see http://epplussoftware.com/developers/licensenotsetexception.
+   at OfficeOpenXml.ExcelPackage.set_LicenseContext(Nullable`1 value)
+   at ContractCheck.Pages.IndexModel..cctor() in D:\WorkSpace\C#\ContractCheck\Pages\Index.cshtml.cs:line 15
+   --- End of inner exception stack trace ---
+   at ContractCheck.Pages.IndexModel..ctor(DatabaseService databaseService) in D:\WorkSpace\C#\ContractCheck\Pages\Index.cshtml.cs:line 18
+   at lambda_method6(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+
+
+
+   Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.TypeInitializationException: The type initializer for 'ContractCheck.Pages.IndexModel' threw an exception.  
+       ---> OfficeOpenXml.LicenseContextPropertyObsoleteException: Please use the static 'ExcelPackage.License' property to set the required license information from EPPlus 8 and later versions. For more info see http://epplussoftware.com/developers/licensenotsetexception.
+         at OfficeOpenXml.ExcelPackage.set_LicenseContext(Nullable`1 value)
+         at ContractCheck.Pages.IndexModel..cctor() in D:\WorkSpace\C#\ContractCheck\Pages\Index.cshtml.cs:line 15       
+         --- End of inner exception stack trace ---
+         at ContractCheck.Pages.IndexModel..ctor(DatabaseService databaseService) in D:\WorkSpace\C#\ContractCheck\Pages\Index.cshtml.cs:line 18
+         at lambda_method6(Closure, IServiceProvider, Object[])
+         at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.DefaultPageModelFactoryProvider.<>c__DisplayClass3_0.<CreateModelFactory>b__0(PageContext pageContext)
+         at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.CreateInstance()
+         at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.RazorPages.Infrastructure.PageActionInvoker.InvokeInnerFilterAsync()
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)       
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+      --- End of stack trace from previous location ---
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+         at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+         at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+         at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+         at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)

@@ -10,7 +10,9 @@ public class DummyDataController : ControllerBase
     [HttpGet("excel")]
     public IActionResult GenerateDummyExcel()
     {
-        ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+        // HAPUS ATAU KOMENTARI BARIS INI:
+        // ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
         using (var package = new ExcelPackage())
         {
             var worksheet = package.Workbook.Worksheets.Add("Pegawai");

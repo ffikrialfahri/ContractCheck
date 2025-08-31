@@ -1,18 +1,118 @@
 @page
 @model ContractCheck.Pages.IndexModel
 
-@{    ViewData["Title"] = "Home page";
+@{
+    ViewData["Title"] = "Home page";
 }
+
+
 
 <h2>Employee Contract Check</h2>
 
-<div class="upload-form">
-    <h3>Upload Excel File</h3>
-    <form method="post" enctype="multipart/form-data" asp-page-handler="Upload">
-        <input type="file" name="file" />
-        <button type="submit">Upload</button>
-    </form>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="success-message">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="error-message">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div class="d-flex justify-content-center gap-3 mb-4">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#manualInputModal">
+        Add New Employee
+    </button>
+    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#uploadExcelModal">
+        Upload Excel File
+    </button>
 </div>
+
+<!-- Manual Input Modal -->
+<div class="modal fade" id="manualInputModal" tabindex="-1" aria-labelledby="manualInputModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="manualInputModalLabel">Manual Employee Input</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" asp-page-handler="Create">
+                    @Html.AntiForgeryToken()
+                    <div class="mb-3">
+                        <label asp-for="NewPegawai.KodePegawai" class="form-label"></label>
+                        <input asp-for="NewPegawai.KodePegawai" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="NewPegawai.NamaPegawai" class="form-label"></label>
+                        <input asp-for="NewPegawai.NamaPegawai" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="NewPegawai.KodeCabang" class="form-label"></label>
+                        <select asp-for="NewPegawai.KodeCabang" class="form-select">
+                            <option value="">-- Select Cabang --</option>
+                            @foreach (var cabang in Model.CabangList)
+                            {
+                                <option value="@cabang.KodeCabang">@cabang.NamaCabang</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="NewPegawai.KodeJabatan" class="form-label"></label>
+                        <select asp-for="NewPegawai.KodeJabatan" class="form-select">
+                            <option value="">-- Select Jabatan --</option>
+                            @foreach (var jabatan in Model.JabatanList)
+                            {
+                                <option value="@jabatan.KodeJabatan">@jabatan.NamaJabatan</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="NewPegawai.TglMulaiKontrak" class="form-label"></label>
+                        <input asp-for="NewPegawai.TglMulaiKontrak" type="date" class="form-control" />
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="NewPegawai.TglHabisKontrak" class="form-label"></label>
+                        <input asp-for="NewPegawai.TglHabisKontrak" type="date" class="form-control" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Upload Excel Modal -->
+<div class="modal fade" id="uploadExcelModal" tabindex="-1" aria-labelledby="uploadExcelModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="uploadExcelModalLabel">Upload Excel File</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="post" enctype="multipart/form-data" asp-page-handler="Upload">
+                    @Html.AntiForgeryToken()
+                    <div class="mb-3">
+                        <label for="fileInput" class="form-label">Select Excel File</label>
+                        <input type="file" name="file" id="fileInput" class="form-control" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <h3>Employee List</h3>
 <table>

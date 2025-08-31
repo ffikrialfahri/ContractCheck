@@ -1,27 +1,199 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa; /* Lighter background */
+    color: #343a40; /* Darker text for contrast */
 }
 
+/* No longer needed as forms are in modals and use Bootstrap classes */
+/*
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.form-section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
+}
+
+.form-section:hover {
+    transform: translateY(-5px);
+}
+
+.form-section h3 {
+    margin-top: 0;
+    color: #5F9EA0;
+    font-size: 1.5em;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="file"]:focus,
+.form-group select:focus {
+    border-color: #5F9EA0;
+    box-shadow: 0 0 0 0.2rem rgba(95, 158, 160, 0.25);
+    outline: none;
+}
+*/
+
+/* Custom button styles to override Bootstrap defaults if needed, or just use Bootstrap's */
+/* For now, let's rely on Bootstrap's .btn-primary and .btn-secondary */
+/*
+.btn {
+    padding: 12px 25px;
+    border: none;
+    background-color: #5F9EA0;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #4682B4;
+    transform: translateY(-2px);
+}
+*/
+
+/* Table Styling */
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 8px;
+table th,
+table td {
+    padding: 15px;
     text-align: left;
+    border-bottom: 1px solid #e9ecef; /* Lighter border */
 }
 
-th {
-    background-color: #f2f2f2;
+table th {
+    background-color: #5F9EA0; /* Softer blue */
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 0.05em;
 }
 
-.upload-form {
-    margin-bottom: 20px;
+table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Lighter alternating row */
+}
+
+table tbody tr:hover {
+    background-color: #e6f7f7; /* Softer hover effect */
+    cursor: pointer;
+}
+
+table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Message styling */
+.success-message {
+    color: #00796b; /* Dark teal */
+    background-color: #e0f2f1; /* Light teal */
+    border: 1px solid #80cbc4; /* Medium teal */
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin: 15px 0 25px 0;
+    font-weight: 500;
+}
+
+.error-message {
+    color: #e65100; /* Dark orange */
+    background-color: #ffe0b2; /* Light orange */
+    border: 1px solid #ffb74d; /* Medium orange */
+    padding: 12px 20px;
+    border-radius: 5px;
+    margin: 15px 0 25px 0;
+    font-weight: 500;
+}
+
+/* General headings */
+h2 {
+    color: #5F9EA0; /* Softer blue */
+    font-size: 2em;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Adjustments for Bootstrap modals */
+.modal-header {
+    background-color: #5F9EA0; /* Softer blue for modal header */
+    color: white;
+    border-bottom: none;
+}
+
+.modal-title {
+    color: white;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+/* Override Bootstrap primary button to match new palette */
+.btn-primary {
+    background-color: #5F9EA0;
+    border-color: #5F9EA0;
+}
+
+.btn-primary:hover {
+    background-color: #4682B4;
+    border-color: #4682B4;
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Default Bootstrap secondary */
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
 }
