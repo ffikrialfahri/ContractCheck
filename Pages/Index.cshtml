@@ -1,0 +1,42 @@
+@page
+@model ContractCheck.Pages.IndexModel
+
+@{    ViewData["Title"] = "Home page";
+}
+
+<h2>Employee Contract Check</h2>
+
+<div class="upload-form">
+    <h3>Upload Excel File</h3>
+    <form method="post" enctype="multipart/form-data" asp-page-handler="Upload">
+        <input type="file" name="file" />
+        <button type="submit">Upload</button>
+    </form>
+</div>
+
+<h3>Employee List</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Kode Pegawai</th>
+            <th>Nama Pegawai</th>
+            <th>Nama Cabang</th>
+            <th>Nama Jabatan</th>
+            <th>Tgl Mulai Kontrak</th>
+            <th>Tgl Habis Kontrak</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.PegawaiList)
+        {
+            <tr>
+                <td>@item.KodePegawai</td>
+                <td>@item.NamaPegawai</td>
+                <td>@item.NamaCabang</td>
+                <td>@item.NamaJabatan</td>
+                <td>@item.TglMulaiKontrak.ToShortDateString()</td>
+                <td>@item.TglHabisKontrak.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
